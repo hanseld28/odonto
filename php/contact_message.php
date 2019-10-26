@@ -1,32 +1,19 @@
 <?php
 
+$message = (isset($_POST)) ? $_POST : null;
 
-//echo var_dump($_POST);
+if(!empty($message))
+{
+    $string = file_get_contents("contact_message.json");
 
+    $json = json_decode($string, true);
 
+    $json["mensagens"][] = $message;
 
-$arq_json = json_encode($_POST);
+    $file = fopen('contact_message.json', 'w');
 
+    fwrite($file, json_encode($json));
 
-//echo $arq_json;
-
-
-
-/*
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$assunto = $_POST['assunto'];
-$descricao = $_POST['descricao'];
-
-echo $nome;
-*/
-
-
-
-$name = 'contact_message.txt';
-$file = fopen($name, 'a');
-fwrite($file, $arq_json);
-
-fclose($file);
-
+    fclose($file);
+}
 ?>
