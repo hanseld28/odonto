@@ -150,12 +150,12 @@
 								<div class="row">
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				    					<input type="text" class="form-control" placeholder="Nome">
+				    					<input type="text" name="nome" id="nome-form-agendamento" class="form-control" placeholder="Nome">
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				    					<input type="text" class="form-control" placeholder="Sobrenome">
+				    					<input type="text" name="sobrenome" id="sobrenome-form-agendamento" class="form-control" placeholder="Sobrenome">
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
@@ -180,7 +180,7 @@
 										<div class="form-group">
 				    					<div class="input-wrap">
 				            		<div class="icon"><span class="ion-md-calendar"></span></div>
-				            		<input type="text" class="form-control appointment_date" placeholder="Data">
+				            		<input type="text" name="dataConsulta" id="data-consulta-form-agendamento" class="form-control appointment_date" placeholder="Data">
 			            		</div>
 				    				</div>
 									</div>
@@ -188,13 +188,13 @@
 										<div class="form-group">
 				    					<div class="input-wrap">
 				            		<div class="icon"><span class="ion-ios-clock"></span></div>
-				            		<input type="text" class="form-control appointment_time" placeholder="Horario">
+				            		<input type="text" name="horarioConsulta" id="horario-consulta-form-agendamento" class="form-control appointment_time" placeholder="Horario">
 			            		</div>
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				              <input type="submit" value="Agendar" class="btn btn-secondary py-2 px-4">
+				              <input type="button" value="Agendar" class="btn btn-secondary py-2 px-4" onclick="submete_form_agendamento_consulta();">
 				            </div>
 									</div>
 								</div>
@@ -553,6 +553,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src="js/forms.js"></script>    
+
   </body>
 </html>
