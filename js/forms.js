@@ -59,3 +59,29 @@ function submete_form_agendamento_consulta(){
     });
 
 }
+
+function cadastro_clientes(){
+
+    let campo_ins = $("#email-form-ins");
+   
+
+    $.ajax({
+        url:"php/cadastro.php",
+        type:'post',
+        data:{
+            email: campo_ins.val()
+            
+        },
+        beforeSend : function(){}
+    })
+
+    .done(function(msg){
+            alert("Seu e-mail foi cadastrado com sucesso! Obrigado.");
+            campo_ins.val("");
+
+    })
+
+    .fail(function(jqXHR, textStatus, msg){
+        alert(msg);
+    });
+}
