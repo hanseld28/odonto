@@ -1,3 +1,21 @@
+function validar_campos(form_id){
+    let form = $("#"+form_id)[0];
+    let tamanho_form = form.length -1;
+    let campos_vazios_do_form = 0;
+    for(let i=0; i < tamanho_form ; i++)
+   {   
+        if(form[i].value == "")
+        {
+            campos_vazios_do_form++;
+        }
+   }
+    if(campos_vazios_do_form > 0) {
+        alert("Preencha todos os campos!");
+    }else{
+        submete_form_contato();
+    }
+}
+
 function limpar_campos(campo1, campo2, campo3, campo4) {
     campo1.val("");
     campo2.val("");
@@ -58,30 +76,4 @@ function submete_form_agendamento_consulta(){
         alert(msg);
     });
 
-}
-
-function cadastro_clientes(){
-
-    let campo_ins = $("#email-form-ins");
-   
-
-    $.ajax({
-        url:"php/cadastro.php",
-        type:'post',
-        data:{
-            email: campo_ins.val()
-            
-        },
-        beforeSend : function(){}
-    })
-
-    .done(function(msg){
-            alert("Seu e-mail foi cadastrado com sucesso! Obrigado.");
-            campo_ins.val("");
-
-    })
-
-    .fail(function(jqXHR, textStatus, msg){
-        alert(msg);
-    });
 }
