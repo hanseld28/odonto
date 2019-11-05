@@ -84,21 +84,19 @@ function cadastro_clientes(){
     
     $.ajax({
         url:"php/cadastro.php",
-        type:'post',
+        type:"post",
         data:{
-            email: campo_ins.val()
-            
+            email: campo_ins.val() 
         },
         beforeSend : function(){}
     })
 
-    .done(function(msg){
-            alert("Seu e-mail foi cadastrado com sucesso! Obrigado.");
-            campo_ins.val("");
-
+    .done(function(response){
+        alert("Seu e-mail foi cadastrado com sucesso! Obrigado.");
+        campo_ins.val("");
     })
 
-    .fail(function(jqXHR, textStatus, msg){
+    .fail(function(msg){
         alert(msg);
     });
 }

@@ -1,17 +1,17 @@
 <?php
-        $email =(isset($_POST['email-form-ins'])) ? $_POST['email-form-ins'] : null;
 
-        if(!empty($email)){
+$email =(isset($_POST['email'])) ? $_POST['email'] : null;
 
-            $string = file_get_contents("cadastro.json");
-            $json = json_decode($string, true);
-            
-            $json["emails"][] =  $email;
-            
-            $file = fopen('cadastro.json','w');
+if(!empty($email)) {
 
-            fwrite($file, json_encode($json));
-            fclose($file);
-        }
+    $string = file_get_contents("cadastro.json");
+    $mailist = json_decode($string, true);
 
+    $mailist["emails"][] = $email;
+    
+    $file = fopen('cadastro.json','w');
+
+    fwrite($file, json_encode($mailist));
+    fclose($file);
+}
 ?>
