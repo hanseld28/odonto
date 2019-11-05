@@ -1,3 +1,21 @@
+function validar_campos(form_id){
+    let form = $("#"+form_id)[0];
+    let tamanho_form = form.length -1;
+    let campos_vazios_do_form = 0;
+    for(let i=0; i < tamanho_form ; i++)
+   {   
+        if(form[i].value == "")
+        {
+            campos_vazios_do_form++;
+        }
+   }
+    if(campos_vazios_do_form > 0) {
+        alert("Preencha todos os campos!");
+    }else{
+        submete_form_contato();
+    }
+}
+
 function limpar_campos(campo1, campo2, campo3, campo4) {
     campo1.val("");
     campo2.val("");

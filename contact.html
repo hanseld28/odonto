@@ -87,7 +87,7 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-						<form action="#">
+						<form action="#" id="form-contato">
               <div class="form-group">
                 <input type="text" name="nome" id="nome-form-contato" class="form-control" placeholder="Seu nome">
               </div>
@@ -101,7 +101,7 @@
                 <textarea name="descricao" id="descricao-form-contato" cols="30" rows="7" class="form-control" placeholder="Digite texto aqui"></textarea>
               </div>
               <div class="form-group">
-                <input type="button" value="Enviar Mensagem" class="btn btn-primary py-3 px-5" onclick="submete_form_contato();">
+                <input type="button" value="Enviar Mensagem" class="btn btn-primary py-3 px-5" onclick="validar_campos('form-contato');">
               </div>
             </form>
 					</div>
@@ -226,10 +226,11 @@
             </div>
             <div class="ftco-footer-widget mb-5">
             	<h2 class="ftco-heading-2">Inscreva-se!</h2>
-              <form action="#" class="subscribe-form">
+              <form action="#" method="POST" class="subscribe-form">
                 <div class="form-group">
                   <input type="text" name="email-form-ins" class="form-control mb-2 text-center" id = "email-form-ins" placeholder="Inserir e-mail">
-                  <input type="button" value="Inscrever" class="form-control submit px-3" onclick="cadastro_clientes()"> 
+                  <input type="button" value="Inscrever" class="form-control submit px-3"  onclick="cadastro_clientes();">
+
                 </div>
               </form>
             </div>
@@ -270,5 +271,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>    
+    
   </body>
 </html>
