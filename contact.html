@@ -87,7 +87,7 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-						<form action="#">
+						<form action="#" id="form-contato">
               <div class="form-group">
                 <input type="text" name="nome" id="nome-form-contato" class="form-control" placeholder="Seu nome">
               </div>
@@ -101,7 +101,7 @@
                 <textarea name="descricao" id="descricao-form-contato" cols="30" rows="7" class="form-control" placeholder="Digite texto aqui"></textarea>
               </div>
               <div class="form-group">
-                <input type="button" value="Enviar Mensagem" class="btn btn-primary py-3 px-5" onclick="submete_form_contato();">
+                <input type="button" value="Enviar Mensagem" class="btn btn-primary py-3 px-5" onclick="validar_campos('form-contato');">
               </div>
             </form>
 					</div>
@@ -269,11 +269,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  
-<<<<<<< HEAD
   <script src="js/forms.js"></script>    
-=======
-  <script src="js/contact-form.js"></script>    
->>>>>>> a729dabea7f3cfd28008aadbde4e1b491d4f6688
+
   </body>
 </html>
